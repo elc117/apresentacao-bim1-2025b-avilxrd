@@ -26,10 +26,8 @@ def incremento():
 print(incremento())
 print(incremento())
 ```
+![image](img/1.png)
 
-![image]("img/1.png")
-
---> imagem do console
 
 ### Paradigmas x Efeitos colaterais
 O paradigma adotado interfere diretamente no uso dos efeitos colaterais, um ótimo exemplo é na comparação entre os paradigmas **Imperativo** e **Declarativo**.
@@ -56,7 +54,8 @@ Haskell tenta eliminar os efeitos colaterais, então todas as funções são pur
 soma :: Int -> Int -> Int
 soma a b = a + b
 ```
--> gif do ghci
+![gif](img/haskell.gif)
+
 
 # Imutabilidade
 Em ciência da computação, imutabilidade é um conceito que se refere à propriedade de um objeto não poder ser modificado ou alterado após a sua criação. Uma vez que um objeto imutável é criado o seu estado não pode ser alterado. Caso haja a necessidade de mudança, um novo objeto é tipicamente criado com as mudanças desejadas, mantendo o original. <br>
@@ -82,9 +81,7 @@ minha_lista[0] = 4
 minha_tupla = (1, 2, 3) 
 minha_tupla[0] = 4
 ```
-[vai dar um TypeError]
--> saida do terminal
--> gif com a exec
+![gif](img/python.gif)
 
 # Fontes
 
