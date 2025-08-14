@@ -26,6 +26,9 @@ def incremento():
 print(incremento())
 print(incremento())
 ```
+
+![image]("img/1.png")
+
 --> imagem do console
 
 ### Paradigmas x Efeitos colaterais
