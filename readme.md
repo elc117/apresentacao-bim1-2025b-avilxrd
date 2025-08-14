@@ -13,6 +13,21 @@ O efeito colateral mais comum é uma atribuição à uma variável global.<br>
 Na presença de efeitos colaterais, o comportamento de um programa pode depender de sua ordem de execução no programa, uma vez que outra expressão pode modificar o valor de uma variável que está em uso.<br>
 Entender e _debugar_ uma função com efeitos colaterais requer um entendimento do contexto em que ela está sendo executada. <br>
 
+### Função com efeito colateral
+A seguinte função incrementa uma variável global iniciada em 0. Em cada chamada estamos printando o valor retornado. 
+```python
+contador = 0
+
+def incremento():
+  global contador
+  contador += 1
+  return contador
+
+print(incremento())
+print(incremento())
+```
+--> imagem do console
+
 ### Paradigmas x Efeitos colaterais
 O paradigma adotado interfere diretamente no uso dos efeitos colaterais, um ótimo exemplo é na comparação entre os paradigmas **Imperativo** e **Declarativo**.
 - Imperativo: utiliza os efeitos colaterais ao seu favor, pois funciona através da atualização do estado de um sistema.
@@ -31,6 +46,14 @@ Uma função pura, em programação funcional, é aquela que não tem nenhum efe
 - A função deve ter transparência referencial, ou seja, depende apenas de seu input;
 Uma função pura é determinística e não possui efeitos colaterais.<br>
 
+### Função pura (Haskell)
+Haskell tenta eliminar os efeitos colaterais, então todas as funções são puras, a não ser que utilizemos E/S de dados.
+```haskell
+-- sempre que utilizarmos as mesmas entradas, teremos as mesmas saídas
+soma :: Int -> Int -> Int
+soma a b = a + b
+```
+-> gif do ghci
 
 # Imutabilidade
 Em ciência da computação, imutabilidade é um conceito que se refere à propriedade de um objeto não poder ser modificado ou alterado após a sua criação. Uma vez que um objeto imutável é criado o seu estado não pode ser alterado. Caso haja a necessidade de mudança, um novo objeto é tipicamente criado com as mudanças desejadas, mantendo o original. <br>
@@ -44,16 +67,21 @@ O conceito de imutabilidade é muito utilizado na **programação funcional**.
 - Performance: reduz a sobrecarga de memória e melhora a eficiência de alocação de memória.
 Dentre outros benefícios.<br>
 
-### Exemplos
+### Tuplas em Python
+O seguinte código mostra exemplos do que podemos/não podemos fazer em um objeto imutável (nesse caso, nas tuplas).<br>
+Obs: podemos pensar nas tuplas como "listas imutáveis", apesar delas terem algumas outras diferenças.
 ```python
-# um exemplo de estrutura de dados imutável são as tuplas do Python
-# tuplas são tipo "listas imutáveis"
+# ex. com lista
+minha_lista = [1, 2, 3]
+minha_lista[0] = 4
 
-minha tupla = (1, 2, 3) # 
-
+# ex. com tuplas
+minha_tupla = (1, 2, 3) 
+minha_tupla[0] = 4
 ```
-
-
+[vai dar um TypeError]
+-> saida do terminal
+-> gif com a exec
 
 # Fontes
 
